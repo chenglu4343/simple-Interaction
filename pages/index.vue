@@ -3,7 +3,7 @@ import { navigation } from '~/constants/navigation'
 </script>
 
 <template>
-  <main class="grid grid-rows-[auto_1fr] h-full gap-4 min-h-0 box-border w-full">
+  <main class="grid grid-rows-[auto_1fr] h-full gap-4 min-h-0 w-full">
     <h1 class="m-0">
       navigation
     </h1>
@@ -18,6 +18,18 @@ import { navigation } from '~/constants/navigation'
 </template>
 
 <style scoped>
+#__nuxt{
+  display: grid;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: azure;
+  overflow: hidden;
+  justify-content: center;
+  grid-template-columns: minmax(0,1080px);
+  padding: 10px;
+  /* overflow-y: scroll; */
+}
+
 .navigation-container{
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }

@@ -19,6 +19,16 @@
   "devDependencies": {
     "@types/node": "^18",
     "@unocss/nuxt": "^0.51.13",
-    "nuxt": "^3.4.3"
+    "lint-staged": "^13.2.2",
+    "nuxt": "^3.4.3",
+    "simple-git-hooks": "^2.8.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint --cache --fix"
+    ]
   }
 }

@@ -7,5 +7,6 @@ export default defineNuxtConfig({
   css: [
     'normalize.css',
     '~/css/scrollbar.css',
+    '~/css/global.css',
   ],
 })

@@ -2,7 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': ^18
+  normalize.css: ^8.0.1
   nuxt: ^3.4.3
+
+dependencies:
+  normalize.css: 8.0.1
 
 devDependencies:
   '@types/node': 18.16.10
@@ -3051,6 +3055,10 @@ packages:
     resolution: {integrity: sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /normalize.css/8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
+    dev: false
 
   /npm-run-path/4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}

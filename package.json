@@ -11,5 +11,8 @@
   "devDependencies": {
     "@types/node": "^18",
     "nuxt": "^3.4.3"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }

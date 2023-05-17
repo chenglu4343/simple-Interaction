@@ -1,19 +1,14 @@
 <script setup lang='ts'>
-useHead({
-  title: 'HoverCard',
-})
-
 const arr = new Array(10).fill(0)
 </script>
 
 <template>
-  <h2>CSS tricker card</h2>
-  <main class="card-container">
+  <div class="card-container">
     <div v-for="(_, index) of arr" :key="index" class="card" />
-  </main>
+  </div>
 </template>
 
-<style>
+<style scoped>
 .card-container{
   display: flex;
   align-items: center;

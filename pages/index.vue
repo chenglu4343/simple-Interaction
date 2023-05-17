@@ -8,7 +8,7 @@ import { navigation } from '~/constants/navigation'
       navigation
     </h1>
 
-    <section class="grid navigation-container overflow-y-scroll max-w-full gap-4 items-start">
+    <section class="grid navigation-container max-w-full gap-4 items-start">
       <div v-for="(nav, index) of navigation" :key="index" class="flex items-center gap-2 min-w-0">
         <span>{{ index + 1 }}.</span>
         <a :href="nav.path">{{ `${nav.name}` }}</a>
@@ -18,18 +18,6 @@ import { navigation } from '~/constants/navigation'
 </template>
 
 <style scoped>
-#__nuxt{
-  display: grid;
-  box-sizing: border-box;
-  height: 100vh;
-  background-color: azure;
-  overflow: hidden;
-  justify-content: center;
-  grid-template-columns: minmax(0,1080px);
-  padding: 10px;
-  /* overflow-y: scroll; */
-}
-
 .navigation-container{
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }

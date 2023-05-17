@@ -1,11 +1,14 @@
 body > #__nuxt{
   display: grid;
-  box-sizing: border-box;
-  height: 100vh;
-  background-color: azure;
-  overflow: hidden;
   justify-content: center;
   grid-template-columns: minmax(0,1080px);
   padding: 10px;
-  overflow-y: scroll;
+}
+
+body{
+  background-color: azure;
+}
+
+* {
+  box-sizing: border-box;
 }

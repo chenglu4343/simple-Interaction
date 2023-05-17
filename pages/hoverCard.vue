@@ -15,7 +15,6 @@ const arr = new Array(10).fill(0)
 
 <style>
 .card-container{
-  --overlay-width: 50px;
   display: flex;
   align-items: center;
   overflow-x: scroll;
@@ -35,14 +34,14 @@ const arr = new Array(10).fill(0)
 }
 
 .card:not(:first-child){
-  margin-left: calc(var(--overlay-width) * -1);
+  margin-left: -50px;
 }
 
 .card:hover{
   transform: translate(-.5rem,-1rem) rotate(3deg);
 }
 
-.card:not(:last-child):hover{
-  margin-right: var(--overlay-width)
+.card:not(:last-child):hover + .card{
+  margin-left: 0;
 }
 </style>

@@ -5,4 +5,5 @@ interface Navigation {
 
 export const navigation: readonly Navigation[] = [
   { name: 'Slide color', path: '/slideColor' },
+  { name: 'Hover card', path: '/hoverCard' },
 ]

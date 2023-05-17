@@ -1,5 +1,9 @@
 <script setup>
 import { navigation } from '~/constants/navigation'
+
+useHead({
+  title: 'navigation',
+})
 </script>
 
 <template>

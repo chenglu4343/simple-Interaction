@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { blue, cyan, geekblue, gold, green, lime, magenta, orange, purple, red, volcano, yellow } from '@ant-design/colors'
 
+useHead({
+  title: 'slideColor',
+})
+
 const colors = {
   red,
   volcano,

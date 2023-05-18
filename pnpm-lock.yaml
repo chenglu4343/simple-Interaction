@@ -13,6 +13,7 @@ specifiers:
   normalize.css: ^8.0.1
   nuxt: ^3.4.3
   simple-git-hooks: ^2.8.1
+  simple-global-scrollbar.css: ^0.0.4
   typescript: ^5.0.4
 
 dependencies:
@@ -20,6 +21,7 @@ dependencies:
   '@antfu/eslint-config': 0.38.6_3qfatcekpgbllh6uk5ivyhkbxq
   eslint: 8.40.0
   normalize.css: 8.0.1
+  simple-global-scrollbar.css: 0.0.4
   typescript: 5.0.4
 
 devDependencies:
@@ -6036,6 +6038,10 @@ packages:
     hasBin: true
     requiresBuild: true
     dev: true
+
+  /simple-global-scrollbar.css/0.0.4:
+    resolution: {integrity: sha512-MvQ0DbtXZfwTG2QtawvO7NaJ74cXxS87cAXtVyPaUjV5XdwXOwoHgFfHX7lO/J91cOZfNpZ2PDJ0e7DUaYJPQQ==}
+    dev: false
 
   /sirv/2.0.3:
     resolution: {integrity: sha512-O9jm9BsID1P+0HOi81VpXPoDxYP374pkOLzACAoyUQ/3OUVndNpsz6wMnY2z+yOxzbllCKZrM+9QrWsv4THnyA==}

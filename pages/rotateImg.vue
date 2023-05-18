@@ -7,6 +7,7 @@ const imgArr = ref<string[]>([])
 const currentIndex = ref(0)
 const animationName = ref<'rotate-vertical' | 'rotate-horizontal' | undefined>(undefined)
 const isAnimation = ref(false)
+const isLoadOk = ref(false)
 
 Promise.all([
   import('~/assets/image/pull-shark-default.png'),
@@ -15,6 +16,7 @@ Promise.all([
 ]).then((promises) => {
   imgArr.value = promises.map(p => p.default)
   nextTick(() => {
+    isLoadOk.value = true
     startAnimate()
   })
 })
@@ -41,7 +43,7 @@ function handleAnimationEnd(e: AnimationEvent) {
 }
 
 function handleMouseEnter() {
-  if (isAnimation.value)
+  if (!isLoadOk.value || isAnimation.value)
     return
 
   startAnimate()

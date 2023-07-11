@@ -7,6 +7,8 @@ useHead({
 
 const HOVER_W = 100
 const HOVER_H = 100
+const HOVER_RATIO = HOVER_W / HOVER_H
+const PREVIEW_W = 300
 const containerRef = ref<HTMLElement | undefined>()
 const { x: mouseX, y: mouseY } = useMouse({
   target: containerRef,
@@ -28,6 +30,8 @@ const styleVars = computed(() => {
   return {
     '--hover-w': `${HOVER_W}px`,
     '--hover-h': `${HOVER_H}px`,
+    '--hover-ratio': HOVER_RATIO,
+    '--preview-w': `${PREVIEW_W}px`,
     '--mouse-x': Math.min(Math.max(HOVER_W / 2, mouseX.value - minusLeft), containerWidth - HOVER_W / 2),
     '--mouse-y': Math.min(Math.max(HOVER_H / 2, mouseY.value - minusTop), containerHeight - HOVER_H / 2),
   }
@@ -97,7 +101,7 @@ function getPageLeftAndTop(element: HTMLElement) {
     display: none;
     position: absolute;
     width: var(--hover-w);
-    height: var(--hover-h);
+    aspect-ratio: var(--hover-ratio);
     background-color: var(--hover-bg);
     box-sizing: border-box;
     left: 0;
@@ -115,8 +119,8 @@ function getPageLeftAndTop(element: HTMLElement) {
 }
 
 .preview-box{
-    width: 300px;
-    height: 300px;
+    width: var(--preview-w);
+    aspect-ratio: var(--hover-ratio);
     margin: auto;
     overflow: hidden;
     background-image: var(--bg-url);

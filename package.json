@@ -26,7 +26,6 @@
     "@vueuse/core": "^10.1.2",
     "@vueuse/nuxt": "^10.1.2",
     "lint-staged": "^13.2.2",
-    "naive-ui": "^2.34.3",
     "nuxt": "^3.4.3",
     "simple-git-hooks": "^2.8.1"
   },

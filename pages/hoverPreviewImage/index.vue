@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { NInputNumber } from 'naive-ui'
 import { useHoverPreviewImg } from './helpers/useHoverPreviewImg'
 import defaultImgSrc from '~/assets/image/pull-shark-bronze.png'
 
@@ -47,23 +46,23 @@ const { containerStyle, hoverBoxStyle, previewBoxStyle } = useHoverPreviewImg({
     <div class="mt-4">
       <div class="row">
         <span>containerWidth:</span>
-        <NInputNumber v-model:value="containerWidth" />
+        <input v-model="containerWidth" type="number">
       </div>
       <div class="row">
         <span>containerHeight:</span>
-        <NInputNumber v-model:value="containerHeight" />
+        <input v-model="containerHeight" type="number">
       </div>
       <div class="row">
         <span>hoverWidth:</span>
-        <NInputNumber v-model:value="hoverWidth" />
+        <input v-model="hoverWidth" type="number">
       </div>
       <div class="row">
         <span>hoverHeight:</span>
-        <NInputNumber v-model:value="hoverHeight" />
+        <input v-model="hoverHeight" type="number">
       </div>
       <div class="row">
         <span>previewWidth:</span>
-        <NInputNumber v-model:value="previewWidth" />
+        <input v-model="previewWidth" type="number">
       </div>
     </div>
   </div>
@@ -76,6 +75,7 @@ const { containerStyle, hoverBoxStyle, previewBoxStyle } = useHoverPreviewImg({
   img{
     width: 100%;
     height: 100%;
+    // object-fit: contain;
   }
 
   .hover-box{

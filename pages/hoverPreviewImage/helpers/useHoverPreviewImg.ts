@@ -118,18 +118,19 @@ export function useHoverPreviewImg(options: OPTIONS) {
 
   const previewBoxStyle = computed<CSSProperties>(() => {
     const previewHeight = toValue(previewWidth as any) / aspectRatio.value
-    /** @default 600 */
-    const xBgSize = toValue(containerWidth as any) / toValue(hoverWidth as any) * toValue(previewWidth as any)
-    /** @default 600 */
-    const yBgSize = toValue(containerHeight as any) / toValue(hoverHeight as any) * toValue(previewHeight as any)
 
-    /** @default -3 */
-    const xMoveStep = -xBgSize / toValue(containerWidth as any)
-    /** @default -3 */
-    const yMoveStep = -yBgSize / toValue(containerHeight as any)
+    /** @default 3 */
+    const xRatio = toValue(previewWidth as any) / toValue(hoverWidth as any)
+    /** @default 3 */
+    const yRatio = previewHeight / toValue(hoverHeight as any)
 
-    const xPosition = (mousePosition.value.mouseX - toValue(hoverWidth as any) / 2) * xMoveStep
-    const yPosition = (mousePosition.value.mouseY - toValue(hoverHeight as any) / 2) * yMoveStep
+    /** @default 600 */
+    const xBgSize = toValue(containerWidth as any) * xRatio
+    /** @default 600 */
+    const yBgSize = toValue(containerHeight as any) * yRatio
+
+    const xPosition = (mousePosition.value.mouseX - toValue(hoverWidth as any) / 2) * -xRatio
+    const yPosition = (mousePosition.value.mouseY - toValue(hoverHeight as any) / 2) * -yRatio
 
     return {
       width: `${toValue(previewWidth)}px`,

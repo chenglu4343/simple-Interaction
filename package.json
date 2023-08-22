@@ -1,7 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "packageManager": "pnpm@8.6.3",
+  "packageManager": "pnpm@8.6.12",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -14,20 +14,20 @@
   "dependencies": {
     "@ant-design/colors": "^7.0.0",
     "@antfu/eslint-config": "^0.38.6",
-    "eslint": "^8.40.0",
+    "eslint": "^8.47.0",
     "normalize.css": "^8.0.1",
-    "sass": "^1.63.6",
+    "sass": "^1.66.1",
     "simple-global-scrollbar.css": "^0.0.4",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.6"
   },
   "devDependencies": {
-    "@types/node": "^18",
+    "@types/node": "^18.17.7",
     "@unocss/nuxt": "^0.51.13",
-    "@vueuse/core": "^10.1.2",
-    "@vueuse/nuxt": "^10.1.2",
-    "lint-staged": "^13.2.2",
-    "nuxt": "^3.4.3",
-    "simple-git-hooks": "^2.8.1"
+    "@vueuse/core": "^10.3.0",
+    "@vueuse/nuxt": "^10.3.0",
+    "lint-staged": "^13.3.0",
+    "nuxt": "^3.6.5",
+    "simple-git-hooks": "^2.9.0"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

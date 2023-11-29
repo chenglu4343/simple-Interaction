@@ -3,15 +3,15 @@ const barContainer = ref<HTMLElement | null>(null)
 const leftDotPercent = ref(0)
 
 function handleMouseDown(ev: MouseEvent) {
-  calcLeftDotPercent(ev)
+  handleMouseCalc(ev)
   barContainer.value?.classList.add('active')
 
-  window.addEventListener('mousemove', calcLeftDotPercent)
+  window.addEventListener('mousemove', handleMouseCalc)
   window.addEventListener(
     'mouseup',
     () => {
       barContainer.value?.classList.remove('active')
-      window.removeEventListener('mousemove', calcLeftDotPercent)
+      window.removeEventListener('mousemove', handleMouseCalc)
     },
     {
       once: true,
@@ -19,24 +19,50 @@ function handleMouseDown(ev: MouseEvent) {
   )
 }
 
-function calcLeftDotPercent(ev: MouseEvent) {
+function handleTouchStart(ev: TouchEvent) {
+  handleTouchCalc(ev)
+  barContainer.value?.classList.add('active')
+
+  window.addEventListener('touchmove', handleTouchCalc)
+  window.addEventListener(
+    'touchend',
+    () => {
+      barContainer.value?.classList.remove('active')
+      window.removeEventListener('touchmove', handleTouchCalc)
+    },
+    {
+      once: true,
+    },
+  )
+}
+
+function calcLeftDotPercent(clientX: number) {
   const rect = barContainer.value?.getBoundingClientRect()
   if (!rect)
     return
 
-  const moveX = ev.clientX - rect.left
+  const moveX = clientX - rect.left
   leftDotPercent.value = Math.min(1, Math.max(0, moveX / rect.width))
+}
+
+function handleMouseCalc(ev: MouseEvent) {
+  calcLeftDotPercent(ev.clientX)
+}
+
+function handleTouchCalc(ev: TouchEvent) {
+  calcLeftDotPercent(ev.touches[0].clientX)
 }
 </script>
 
 <template>
-  <div ref="barContainer" class="bar" @click="calcLeftDotPercent">
+  <div ref="barContainer" class="bar" @click="handleMouseCalc">
     <div
       class="dot"
       :style="{
         '--left': `${leftDotPercent * 100}%`,
       }"
       @mousedown="handleMouseDown"
+      @touchstart="handleTouchStart"
     />
   </div>
 </template>

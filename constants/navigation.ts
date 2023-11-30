@@ -9,4 +9,5 @@ export const navigation: readonly Navigation[] = [
   { name: 'Rotate img', path: '/rotateImg' },
   { name: 'Hover Preview Image', path: '/hoverPreviewImage' },
   { name: 'Drag effect', path: '/dragEffect' },
+  { name: 'Font gradient color', path: '/FontGradientColor' },
 ]

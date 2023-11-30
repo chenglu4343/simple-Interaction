@@ -27,7 +27,7 @@ if (process.client && !('paintWorklet' in CSS)) {
 .clip {
   --num: 0;
   --deg: calc(var(--num) * 1deg );
-  background: linear-gradient(120deg, hsl(var(--deg), 50%, 50%) 30%, hsl(calc(var(--deg) + 30deg), 50%, 50%));
+  background: linear-gradient(120deg, hsl(var(--deg), 100%, 50%) 30%, hsl(calc(var(--deg) + 30deg), 100%, 50%));
   color: transparent;
   background-clip: text;
   animation: rotate 3s linear infinite;

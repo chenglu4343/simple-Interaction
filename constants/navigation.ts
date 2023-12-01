@@ -11,4 +11,5 @@ export const navigation: readonly Navigation[] = [
   { name: 'Drag effect', path: '/dragEffect' },
   { name: 'Font gradient color', path: '/FontGradientColor' },
   { name: 'Scroll query', path: '/ScrollQuery' },
+  { name: 'Time Sharing Render', path: '/TimeSharingRender' },
 ]

@@ -13,10 +13,9 @@ if (process.client) {
         })),
       )
       // 手动触发下一次的 IntersectionObserver，可能加载完之后依然没有撑满
-      requestAnimationFrame(() => {
-        observer.unobserve(loadingRef.value!)
-        observer.observe(loadingRef.value!)
-      })
+      // 回调触发本身就是异步的，此时dom数据已经渲染完成
+      observer.unobserve(loadingRef.value!)
+      observer.observe(loadingRef.value!)
     }
   })
 
@@ -30,14 +29,16 @@ if (process.client) {
 </script>
 
 <template>
-  <section>
-    <ul>
-      <li v-for="item in data" :key="item.title">
-        {{ item.title }}
-      </li>
-    </ul>
-  </section>
-  <footer ref="loadingRef" class="text-center">
-    loading...
-  </footer>
+  <main>
+    <section>
+      <ul>
+        <li v-for="item in data" :key="item.title">
+          {{ item.title }}
+        </li>
+      </ul>
+    </section>
+    <footer ref="loadingRef" class="text-center">
+      loading...
+    </footer>
+  </main>
 </template>

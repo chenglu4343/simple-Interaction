@@ -9,7 +9,7 @@ interface Data {
 
 const loadSize = [1000, 10000, 100000, 500000, 1000000]
 const dataArr = ref<Array<Data>>([])
-const { setValue } = useTimeSharingRef(dataArr)
+const { setValue } = useTimeSharingRef(dataArr, item => item.id)
 
 function generateData(): Data {
   return {

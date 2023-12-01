@@ -10,4 +10,5 @@ export const navigation: readonly Navigation[] = [
   { name: 'Hover Preview Image', path: '/hoverPreviewImage' },
   { name: 'Drag effect', path: '/dragEffect' },
   { name: 'Font gradient color', path: '/FontGradientColor' },
+  { name: 'Scroll query', path: '/ScrollQuery' },
 ]

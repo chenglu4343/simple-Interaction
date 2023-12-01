@@ -7,7 +7,7 @@ useHead({
 </script>
 
 <template>
-  <main class="grid grid-rows-[auto_1fr] h-full gap-4 min-h-0 w-full">
+  <main class="grid grid-rows-[auto_1fr] h-full gap-4 min-h-0 w-full items-start">
     <h1 class="m-0">
       navigation
     </h1>

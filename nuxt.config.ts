@@ -9,4 +9,11 @@ export default defineNuxtConfig({
     'simple-global-scrollbar.css',
     '~/assets/css/global.css',
   ],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'zh',
+      },
+    },
+  },
 })

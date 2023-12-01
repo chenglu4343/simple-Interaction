@@ -3,6 +3,8 @@ body > #__nuxt{
   justify-content: center;
   grid-template-columns: minmax(0,1080px);
   padding: 10px;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 body{

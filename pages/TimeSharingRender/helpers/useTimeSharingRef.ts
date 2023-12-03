@@ -36,9 +36,14 @@ export function useTimeSharingRef<T>(arrRef: Ref<Array<T>>, getKey: (item: T) =>
         needAddMap.set(getKey(item), item)
     })
 
+    let frameCount = 0
     _loadNext()
 
     function _loadNext() {
+      if ((frameCount++) % 2 === 0) {
+        requestAnimationFrame(_loadNext)
+        return
+      }
       if ((needAddMap.size || needDeleteSet.size) && currentNum === invokeNum) {
         if (needDeleteSet.size) {
           Array.from(needDeleteSet)

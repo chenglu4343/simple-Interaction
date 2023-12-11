@@ -89,6 +89,8 @@ function handleTouchMove(ev: TouchEvent) {
   if (!dragCloneEl)
     return
 
+  ev.preventDefault()
+
   const { clientX, clientY } = ev.touches[0]
   const moveX = startClientX - clientX
   const moveY = startClientY - clientY

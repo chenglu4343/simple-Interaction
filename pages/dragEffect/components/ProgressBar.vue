@@ -50,6 +50,7 @@ function handleMouseCalc(ev: MouseEvent) {
 }
 
 function handleTouchCalc(ev: TouchEvent) {
+  ev.preventDefault()
   calcLeftDotPercent(ev.touches[0].clientX)
 }
 </script>

@@ -12,4 +12,5 @@ export const navigation: readonly Navigation[] = [
   { name: 'Font gradient color', path: '/FontGradientColor' },
   { name: 'Scroll query', path: '/ScrollQuery' },
   { name: 'Time Sharing Render', path: '/TimeSharingRender' },
+  { name: 'Height 100%', path: '/Height100' },
 ]

@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-const arr = new Array(10).fill(0)
+const arr = Array.from({ length: 10 }).fill(0)
 </script>
 
 <template>

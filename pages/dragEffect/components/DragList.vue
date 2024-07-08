@@ -112,7 +112,7 @@ function handleTouchEnd() {
 
 /**
  * 工具函数，获取元素对应的drag元素和索引
- *  */
+ */
 function getExactDragData(el: Element | null) {
   const dragEl = el?.closest<HTMLDivElement>('.drag-item')
   const dragIndex = Array.from(containerRef.value?.children ?? []).findIndex(item => item === dragEl)

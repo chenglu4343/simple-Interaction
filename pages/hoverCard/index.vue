@@ -11,15 +11,15 @@ const cards: {
   title: string
   component: Component
 }[] = [
-    {
-      title: 'CSS tricker card',
-      component: TrickerCard,
-    },
-    {
-      title: 'Zoom In Card',
-      component: ZoomInCard,
-    },
-  ]
+  {
+    title: 'CSS tricker card',
+    component: TrickerCard,
+  },
+  {
+    title: 'Zoom In Card',
+    component: ZoomInCard,
+  },
+]
 </script>
 
 <template>

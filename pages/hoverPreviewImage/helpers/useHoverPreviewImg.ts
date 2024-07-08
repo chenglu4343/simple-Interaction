@@ -19,36 +19,36 @@ export interface OPTIONS {
    * containerWidth
    * @default 200
    */
-  containerWidth?: MaybeRefOrGetter<Number>
+  containerWidth?: MaybeRefOrGetter<number>
   /**
    * containerHeight
    * @default 200
    */
-  containerHeight?: MaybeRefOrGetter<Number>
+  containerHeight?: MaybeRefOrGetter<number>
 
   // hover
   /**
    * hoverWidth
    * @default 100
    */
-  hoverWidth?: MaybeRefOrGetter<Number>
+  hoverWidth?: MaybeRefOrGetter<number>
   /**
    * hoverWidth
    * @default 100
    */
-  hoverHeight?: MaybeRefOrGetter<Number>
+  hoverHeight?: MaybeRefOrGetter<number>
   /**
    * hoverBg
    * @default "rgba(24, 144, 255,.6)"
    */
-  hoverBg?: MaybeRefOrGetter<String>
+  hoverBg?: MaybeRefOrGetter<string>
 
   // preview
   /**
    * previewWidth
    * @default 300
    */
-  previewWidth?: MaybeRefOrGetter<Number>
+  previewWidth?: MaybeRefOrGetter<number>
 }
 
 export function useHoverPreviewImg(options: OPTIONS) {

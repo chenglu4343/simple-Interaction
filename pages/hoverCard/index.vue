@@ -11,20 +11,22 @@ const cards: {
   title: string
   component: Component
 }[] = [
-  {
-    title: 'CSS tricker card',
-    component: TrickerCard,
-  },
-  {
-    title: 'Zoom In Card',
-    component: ZoomInCard,
-  },
-]
+    {
+      title: 'CSS tricker card',
+      component: TrickerCard,
+    },
+    {
+      title: 'Zoom In Card',
+      component: ZoomInCard,
+    },
+  ]
 </script>
 
 <template>
-  <section v-for="(card, index) of cards" :key="index">
-    <h2>{{ card.title }}</h2>
-    <component :is="card.component" />
-  </section>
+  <main>
+    <section v-for="(card, index) of cards" :key="index">
+      <h2>{{ card.title }}</h2>
+      <component :is="card.component" />
+    </section>
+  </main>
 </template>

@@ -13,4 +13,5 @@ export const navigation: readonly Navigation[] = [
   { name: 'Scroll query', path: '/ScrollQuery' },
   { name: 'Time Sharing Render', path: '/TimeSharingRender' },
   { name: 'Height 100%', path: '/Height100' },
+  { name: 'BasicLayout', path: '/BasicLayout' },
 ]

@@ -14,4 +14,5 @@ export const navigation: readonly Navigation[] = [
   { name: 'Time Sharing Render', path: '/TimeSharingRender' },
   { name: 'Height 100%', path: '/Height100' },
   { name: 'BasicLayout', path: '/BasicLayout' },
+  { name: 'ScaleClickBtn', path: '/ScaleClickBtn' },
 ]
